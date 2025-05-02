@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ShikaroutDoor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">ShikharoutDoor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="nav-link me-3"><i class="fas fa-search"></i></a>
+                    <a href="login.html" class="nav-link me-3 active"><i class="fas fa-user"></i></a>
+                    <a href="#" class="nav-link position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row g-0 shadow-sm rounded overflow-hidden">
+                        <!-- Left Side - Login Form -->
+                        <div class="col-lg-6 bg-white p-5">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h2 class="mb-0">Welcome Back</h2>
+                            </div>
+                            <p class="text-muted mb-4">Sign in to access your personalized shopping experience</p>
+                            
+                            <form id="loginForm" class="needs-validation" novalidate>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                        <input type="email" class="form-control" id="email" placeholder="your@email.com" required>
+                                        <div class="invalid-feedback">Please enter a valid email</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="password" class="form-label">Password</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                        <input type="password" class="form-control" id="password" placeholder="••••••••" required
+                                               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$">
+                                        <button class="btn btn-outline-secondary toggle-password" type="button">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <div class="invalid-feedback">
+                                            Password must be 8+ chars with uppercase, lowercase & number
+                                        </div>
+                                    </div>
+                                    <div class="password-strength mt-2">
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                                        </div>
+                                        <small class="text-muted strength-text">Password strength</small>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    </div>
+                                    <a href="forgot-password.html" class="text-primary">Forgot password?</a>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary w-100 mb-3" id="loginBtn">
+                                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                    Sign In
+                                </button>
+                                
+                          
+                                
+                                <div class="divider my-4 position-relative text-center">
+                                    <span class="bg-white px-2 position-relative">OR</span>
+                                </div>
+                                
+                                <div class="social-login">
+                                    <button type="button" class="btn btn-outline-secondary w-100 mb-2" id="googleLogin">
+                                        <i class="fab fa-google me-2"></i> Continue with Google
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary w-100" id="facebookLogin">
+                                        <i class="fab fa-facebook-f me-2"></i> Continue with Facebook
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Right Side - Promo/Features -->
+                        <div class="col-lg-6 d-none d-lg-block bg-light p-5">
+                            <div class="h-100 d-flex flex-column justify-content-center">
+                                <h3 class="mb-4">New Features</h3>
+                                
+                                <div class="feature-list mb-4">
+                                    <div class="d-flex mb-3">
+                                        <div class="me-3 text-primary">
+                                            <i class="fas fa-shield-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">Enhanced Security</h5>
+                                            <p class="text-muted small">Two-factor authentication now available</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex mb-3">
+                                        <div class="me-3 text-primary">
+                                            <i class="fas fa-bolt fa-2x"></i>
+                                        </div>
+                                  
+                                    
+                                    <div class="d-flex mb-3">
+                                        <div class="me-3 text-primary">
+                                            <i class="fas fa-gift fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">Exclusive Offers</h5>
+                                            <p class="text-muted small">Get personalized discounts when you login</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-auto">
+                                    <div class="alert alert-info">
+                                        <div class="d-flex">
+                                            <div class="me-2">
+                                                <i class="fas fa-info-circle"></i>
+                                            </div>
+                                            <div>
+                                                <small>New to ShikharoutDoor? <a href="register.html" class="alert-link">Create an account</a> to get 15% off your first order!</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two-Factor Authentication Modal -->
+    <div class="modal fade" id="twoFactorModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Two-Factor Authentication</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>For added security, please enter the 6-digit code sent to your email/phone</p>
+                    <div class="otp-inputs d-flex justify-content-between mb-4">
+                        <input type="text" maxlength="1" class="form-control text-center otp-input" autofocus>
+                        <input type="text" maxlength="1" class="form-control text-center otp-input">
+                        <input type="text" maxlength="1" class="form-control text-center otp-input">
+                        <input type="text" maxlength="1" class="form-control text-center otp-input">
+                        <input type="text" maxlength="1" class="form-control text-center otp-input">
+                        <input type="text" maxlength="1" class="form-control text-center otp-input">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#" class="text-primary small" id="resendCode">Resend code</a>
+                        <span class="small text-muted" id="countdown">00:30</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="verifyOtpBtn">Verify</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4>ShikharoutDoor</h4>
+                    <p class="mt-3">Social Media</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Releases</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Stay up to date</h5>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 ShikharoutDoor. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Terms</a>
+                    <a href="#" class="me-3">Privacy</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Password visibility toggle
+            const togglePassword = document.querySelector('.toggle-password');
+            const passwordInput = document.getElementById('password');
+            
+            togglePassword.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.replace('fa-eye', 'fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.replace('fa-eye-slash', 'fa-eye');
+                }
+            });
+            
+            // Password strength indicator
+            passwordInput.addEventListener('input', function() {
+                const progressBar = document.querySelector('.password-strength .progress-bar');
+                const strengthText = document.querySelector('.password-strength .strength-text');
+                const password = this.value;
+                let strength = 0;
+                
+                // Length check
+                if (password.length >= 8) strength += 25;
+                if (password.length >= 12) strength += 15;
+                
+                // Complexity checks
+                if (/[A-Z]/.test(password)) strength += 20;
+                if (/[a-z]/.test(password)) strength += 20;
+                if (/\d/.test(password)) strength += 10;
+                if (/[^A-Za-z0-9]/.test(password)) strength += 10;
+                
+                // Update UI
+                progressBar.style.width = `${Math.min(strength, 100)}%`;
+                
+                if (strength < 40) {
+                    progressBar.className = 'progress-bar bg-danger';
+                    strengthText.textContent = 'Weak';
+                } else if (strength < 70) {
+                    progressBar.className = 'progress-bar bg-warning';
+                    strengthText.textContent = 'Moderate';
+                } else {
+                    progressBar.className = 'progress-bar bg-success';
+                    strengthText.textContent = 'Strong';
+                }
+            });
+            
+            // Form validation
+            const form = document.getElementById('loginForm');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (!form.checkValidity()) {
+                    e.stopPropagation();
+                    form.classList.add('was-validated');
+                    return;
+                }
+                
+                // Simulate login process
+                const loginBtn = document.getElementById('loginBtn');
+                loginBtn.disabled = true;
+                loginBtn.querySelector('.spinner-border').classList.remove('d-none');
+                
+                // Simulate API call
+                setTimeout(() => {
+                    // Show 2FA modal (simulating account with 2FA enabled)
+                    if (Math.random() > 0.5) {
+                        const twoFactorModal = new bootstrap.Modal(document.getElementById('twoFactorModal'));
+                        twoFactorModal.show();
+                    } else {
+                        Toastify({
+                            text: "Login successful! Redirecting...",
+                            duration: 3000,
+                            close: true,
+                            gravity: "top",
+                            position: "right",
+                            backgroundColor: "#28a745",
+                            stopOnFocus: true
+                        }).showToast();
+                        
+                        // Redirect after delay
+                        setTimeout(() => {
+                            window.location.href = "account.html";
+                        }, 1500);
+                    }
+                    
+                    loginBtn.disabled = false;
+                    loginBtn.querySelector('.spinner-border').classList.add('d-none');
+                }, 1500);
+            });
+            
+           
+            // Social login buttons
+            document.getElementById('googleLogin').addEventListener('click', function() {
+                Toastify({
+                    text: "Redirecting to Google authentication...",
+                    duration: 3000,
+                    close: true,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#4285F4",
+                    stopOnFocus: true
+                }).showToast();
+            });
+            
+            document.getElementById('facebookLogin').addEventListener('click', function() {
+                Toastify({
+                    text: "Redirecting to Facebook authentication...",
+                    duration: 3000,
+                    close: true,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#4267B2",
+                    stopOnFocus: true
+                }).showToast();
+            });
+            
+            // OTP input auto-focus
+            const otpInputs = document.querySelectorAll('.otp-input');
+            otpInputs.forEach((input, index) => {
+                input.addEventListener('input', function() {
+                    if (this.value.length === 1 && index < otpInputs.length - 1) {
+                        otpInputs[index + 1].focus();
+                    }
+                });
+                
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
+                        otpInputs[index - 1].focus();
+                    }
+                });
+            });
+            
+            // Resend OTP countdown
+            let countdown = 30;
+            const countdownElement = document.getElementById('countdown');
+            const resendCodeBtn = document.getElementById('resendCode');
+            
+            resendCodeBtn.style.display = 'none';
+            
+            const timer = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = `00:${countdown.toString().padStart(2, '0')}`;
+                
+                if (countdown <= 0) {
+                    clearInterval(timer);
+                    countdownElement.style.display = 'none';
+                    resendCodeBtn.style.display = 'inline';
+                }
+            }, 1000);
+            
+            resendCodeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                Toastify({
+                    text: "New verification code sent!",
+                    duration: 3000,
+                    close: true,
+                    gravity: "top",
+                    position: "right",
+                    backgroundColor: "#17a2b8",
+                    stopOnFocus: true
+                }).showToast();
+                
+                // Reset countdown
+                countdown = 30;
+                countdownElement.style.display = 'inline';
+                resendCodeBtn.style.display = 'none';
+                
+                const timer = setInterval(() => {
+                    countdown--;
+                    countdownElement.textContent = `00:${countdown.toString().padStart(2, '0')}`;
+                    
+                    if (countdown <= 0) {
+                        clearInterval(timer);
+                        countdownElement.style.display = 'none';
+                        resendCodeBtn.style.display = 'inline';
+                    }
+                }, 1000);
+            });
+            
+        });
+    </script>
+    
+    <style>
+        /* Additional styles for enhanced login page */
+        
+        .password-strength {
+            margin-top: 0.5rem;
+        }
+        
+        .feature-list .fa {
+            margin-top: 4px;
+        }
+        
+        .otp-input {
+            font-size: 1.5rem;
+            height: 3.5rem;
+            margin: 0 0.25rem;
+        }
+        
+        .divider {
+            border-top: 1px solid #dee2e6;
+            position: relative;
+        }
+        
+        .divider span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0 1rem;
+            background-color: #f8f9fa;
+        }
+        
+        .dark-mode .divider span {
+            background-color: #1e1e1e;
+        }
+    </style>
+</body>
+</html>
