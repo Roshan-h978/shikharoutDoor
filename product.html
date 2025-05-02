@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - ShikharoutDoor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ShikharoutDoor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="nav-link me-3"><i class="fas fa-search"></i></a>
+                    <a href="#" class="nav-link me-3"><i class="fas fa-user"></i></a>
+                    <a href="#" class="nav-link position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <section class="product-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="product-gallery">
+                        <div class="main-image mb-3">
+                            <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" class="img-fluid rounded" id="mainImage">
+                        </div>
+                        <div class="thumbnail-row d-flex">
+                            <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" class="thumbnail-img active" width="80">
+                            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" class="thumbnail-img" width="80">
+                            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" class="thumbnail-img" width="80">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <h1 class="product-title">Regular Fit Long Sleeve Top</h1>
+                    <div class="product-rating mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="ms-2">(4.8) 24 reviews</span>
+                    </div>
+                    
+                    <div class="product-price mb-4">
+                        <span class="fs-3 fw-bold">$38.99</span>
+                        <span class="text-decoration-line-through text-muted ms-2">$49.99</span>
+                        <span class="badge bg-danger ms-2">Save 22%</span>
+                    </div>
+                    
+                    <p class="product-description mb-4">
+                        This regular fit long sleeve top is made from premium quality cotton for ultimate comfort. 
+                        Perfect for both casual and formal occasions, it features a classic design with a modern twist.
+                    </p>
+                    
+                    <div class="product-options mb-4">
+                        <div class="mb-3">
+                            <h6>Color</h6>
+                            <div class="color-options">
+                                <input type="radio" name="color" id="color-green" checked>
+                                <label for="color-green" style="background-color: #224F34"></label>
+                                
+                                <input type="radio" name="color" id="color-blue">
+                                <label for="color-blue" style="background-color: #6a977c"></label>
+                                
+                                <input type="radio" name="color" id="color-black">
+                                <label for="color-black" style="background-color: #000000"></label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h6>Size</h6>
+                            <div class="size-options">
+                                <input type="radio" name="size" id="size-xs" disabled>
+                                <label for="size-xs">XS</label>
+                                
+                                <input type="radio" name="size" id="size-s">
+                                <label for="size-s">S</label>
+                                
+                                <input type="radio" name="size" id="size-m" checked>
+                                <label for="size-m">M</label>
+                                
+                                <input type="radio" name="size" id="size-l">
+                                <label for="size-l">L</label>
+                                
+                                <input type="radio" name="size" id="size-xl">
+                                <label for="size-xl">XL</label>
+                            </div>
+                            <a href="#" class="size-guide-link" data-bs-toggle="modal" data-bs-target="#sizeGuideModal">Size Guide</a>
+                        </div>
+                        
+                        <div class="quantity-selector mb-4">
+                            <h6>Quantity</h6>
+                            <div class="input-group" style="width: 150px;">
+                                <button class="btn btn-outline-secondary" type="button" id="decreaseQty">-</button>
+                                <input type="text" class="form-control text-center" value="1" id="quantity">
+                                <button class="btn btn-outline-secondary" type="button" id="increaseQty">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-lg me-3" id="addToCart">
+                            <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg">
+                            <i class="far fa-heart me-2"></i>Wishlist
+                        </button>
+                    </div>
+                    
+                    <div class="product-meta mt-4">
+                        <div class="d-flex mb-2">
+                            <span class="text-muted me-3">SKU:</span>
+                            <span>RIVO-001</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <span class="text-muted me-3">Category:</span>
+                            <span>Tops, Men</span>
+                        </div>
+                        <div class="d-flex">
+                            <span class="text-muted me-3">Tags:</span>
+                            <span>Casual, Long Sleeve, Cotton</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-tabs mt-5">
+                <ul class="nav nav-tabs" id="productTabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="tab" href="#description">Description</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#details">Additional Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#reviews">Reviews (24)</a>
+                    </li>
+                </ul>
+                
+                <div class="tab-content p-3 border border-top-0 rounded-bottom">
+                    <div class="tab-pane fade show active" id="description">
+                        <h4>Product Description</h4>
+                        <p>
+                            Our Regular Fit Long Sleeve Top is crafted from 100% premium cotton for a soft and comfortable feel. 
+                            The classic design features a button-down collar and a relaxed fit that's perfect for all-day wear.
+                        </p>
+                        <ul>
+                            <li>100% premium cotton</li>
+                            <li>Regular fit for comfort</li>
+                            <li>Button-down collar</li>
+                            <li>Machine washable</li>
+                            <li>Available in multiple colors</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="details">
+                        <h4>Additional Information</h4>
+                        <table class="table">
+                            <tr>
+                                <th>Material</th>
+                                <td>100% Cotton</td>
+                            </tr>
+                            <tr>
+                                <th>Fit</th>
+                                <td>Regular</td>
+                            </tr>
+                            <tr>
+                                <th>Care Instructions</th>
+                                <td>Machine wash cold, tumble dry low</td>
+                            </tr>
+                            <tr>
+                                <th>Origin</th>
+                                <td>Made in USA</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="reviews">
+                        <h4>Customer Reviews</h4>
+                        <div class="review-summary mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="me-4">
+                                    <span class="display-4">4.8</span>
+                                    <span class="text-muted">/5</span>
+                                </div>
+                                <div>
+                                    <div class="mb-1">
+                                        <span class="me-2">5 stars</span>
+                                        <div class="progress" style="width: 200px; height: 10px;">
+                                            <div class="progress-bar bg-success" style="width: 80%"></div>
+                                        </div>
+                                        <span class="ms-2">16</span>
+                                    </div>
+                                    <div class="mb-1">
+                                        <span class="me-2">4 stars</span>
+                                        <div class="progress" style="width: 200px; height: 10px;">
+                                            <div class="progress-bar bg-success" style="width: 15%"></div>
+                                        </div>
+                                        <span class="ms-2">3</span>
+                                    </div>
+                                    <div class="mb-1">
+                                        <span class="me-2">3 stars</span>
+                                        <div class="progress" style="width: 200px; height: 10px;">
+                                            <div class="progress-bar bg-warning" style="width: 5%"></div>
+                                        </div>
+                                        <span class="ms-2">1</span>
+                                    </div>
+                                    <div class="mb-1">
+                                        <span class="me-2">2 stars</span>
+                                        <div class="progress" style="width: 200px; height: 10px;">
+                                            <div class="progress-bar bg-danger" style="width: 0%"></div>
+                                        </div>
+                                        <span class="ms-2">0</span>
+                                    </div>
+                                    <div>
+                                        <span class="me-2">1 star</span>
+                                        <div class="progress" style="width: 200px; height: 10px;">
+                                            <div class="progress-bar bg-danger" style="width: 0%"></div>
+                                        </div>
+                                        <span class="ms-2">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="review-form mb-5">
+                            <h5>Write a Review</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">Rating</label>
+                                    <div class="rating-input">
+                                        <i class="far fa-star" data-rating="1"></i>
+                                        <i class="far fa-star" data-rating="2"></i>
+                                        <i class="far fa-star" data-rating="3"></i>
+                                        <i class="far fa-star" data-rating="4"></i>
+                                        <i class="far fa-star" data-rating="5"></i>
+                                        <input type="hidden" name="rating" id="ratingValue" value="0">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="reviewTitle" class="form-label">Review Title</label>
+                                    <input type="text" class="form-control" id="reviewTitle">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="reviewText" class="form-label">Your Review</label>
+                                    <textarea class="form-control" id="reviewText" rows="4"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit Review</button>
+                            </form>
+                        </div>
+                        
+                        <div class="review-list">
+                            <div class="review-item mb-4 pb-4 border-bottom">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h6>Perfect fit and comfortable</h6>
+                                    <div class="text-muted">April 15, 2023</div>
+                                </div>
+                                <div class="rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="mb-2">By John D.</p>
+                                <p>
+                                    This shirt fits perfectly and is very comfortable. The material is soft and the quality is excellent. 
+                                    I would definitely recommend this product to others.
+                                </p>
+                            </div>
+                            
+                            <div class="review-item mb-4 pb-4 border-bottom">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h6>Great quality</h6>
+                                    <div class="text-muted">March 28, 2023</div>
+                                </div>
+                                <div class="rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="mb-2">By Sarah M.</p>
+                                <p>
+                                    The shirt is well-made and looks great. The only reason I'm giving it 4 stars is that it runs slightly 
+                                    large compared to what I expected.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="related-products mt-5">
+                <h3 class="mb-4">You May Also Like</h3>
+                <div class="row">
+                    <!-- Related Product 1 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="/api/placeholder/300/300" alt="Related Product 1" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">V-Neck T-Shirt</h5>
+                                <p class="card-text">$29.99</p>
+                                <button class="btn btn-sm btn-outline-primary">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Product 2 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="/api/placeholder/300/300" alt="Related Product 2" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Casual Button-Down</h5>
+                                <p class="card-text">$42.99</p>
+                                <button class="btn btn-sm btn-outline-primary">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Product 3 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="/api/placeholder/300/300" alt="Related Product 3" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Polo Shirt</h5>
+                                <p class="card-text">$34.99</p>
+                                <button class="btn btn-sm btn-outline-primary">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Related Product 4 -->
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="/api/placeholder/300/300" alt="Related Product 4" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Henley Shirt</h5>
+                                <p class="card-text">$36.99</p>
+                                <button class="btn btn-sm btn-outline-primary">Quick View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    
+    <!-- Size Guide Modal -->
+    <div class="modal fade" id="sizeGuideModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Size Guide</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Size</th>
+                                    <th>Chest (in)</th>
+                                    <th>Waist (in)</th>
+                                    <th>Length (in)</th>
+                                    <th>Sleeve (in)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>XS</td>
+                                    <td>32-34</td>
+                                    <td>26-28</td>
+                                    <td>25</td>
+                                    <td>23.5</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>35-37</td>
+                                    <td>29-31</td>
+                                    <td>26</td>
+                                    <td>24</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>38-40</td>
+                                    <td>32-34</td>
+                                    <td>27</td>
+                                    <td>24.5</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>41-43</td>
+                                    <td>35-37</td>
+                                    <td>28</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>44-46</td>
+                                    <td>38-40</td>
+                                    <td>29</td>
+                                    <td>25.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-muted">* Measurements are body measurements, not garment measurements.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4>ShikharoutDoor</h4>
+                    <p class="mt-3">Social Media</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Releases</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Stay up to date</h5>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 ShikharoutDoor. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Terms</a>
+                    <a href="#" class="me-3">Privacy</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Basic JavaScript functionality for the product page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Thumbnail image switching
+        const thumbnails = document.querySelectorAll('.thumbnail-img');
+        const mainImage = document.getElementById('mainImage');
+        
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                // Remove active class from all thumbnails
+                thumbnails.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked thumbnail
+                this.classList.add('active');
+                // Update main image
+                mainImage.src = this.src;
+            });
+        });
+        
+        // Quantity selector
+        const qtyInput = document.getElementById('quantity');
+        const decreaseBtn = document.getElementById('decreaseQty');
+        const increaseBtn = document.getElementById('increaseQty');
+        
+        decreaseBtn.addEventListener('click', function() {
+            let qty = parseInt(qtyInput.value);
+            if (qty > 1) {
+                qtyInput.value = qty - 1;
+            }
+        });
+        
+        increaseBtn.addEventListener('click', function() {
+            let qty = parseInt(qtyInput.value);
+            qtyInput.value = qty + 1;
+        });
+        
+        // Add to cart functionality
+        const addToCartBtn = document.getElementById('addToCart');
+        const cartCountBadge = document.querySelector('.cart-count');
+        
+        addToCartBtn.addEventListener('click', function() {
+            // Get current cart count
+            let currentCount = parseInt(cartCountBadge.textContent);
+            // Add quantity to cart
+            let addQty = parseInt(qtyInput.value);
+            // Update cart count
+            cartCountBadge.textContent = currentCount + addQty;
+            
+            // Show added to cart message
+            alert('Product added to cart!');
+        });
+        
+        // Rating system for review form
+        const ratingStars = document.querySelectorAll('.rating-input i');
+        const ratingInput = document.getElementById('ratingValue');
+        
+        ratingStars.forEach(star => {
+            star.addEventListener('mouseover', function() {
+                const rating = this.getAttribute('data-rating');
+                highlightStars(rating);
+            });
+            
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                ratingInput.value = rating;
+                highlightStars(rating);
+            });
+            
+            star.addEventListener('mouseout', function() {
+                highlightStars(ratingInput.value);
+            });
+        });
+        
+        function highlightStars(rating) {
+            ratingStars.forEach(star => {
+                const starRating = star.getAttribute('data-rating');
+                if (starRating <= rating) {
+                    star.classList.remove('far');
+                    star.classList.add('fas');
+                } else {
+                    star.classList.remove('fas');
+                    star.classList.add('far');
+                }
+            });
+        }
+    });
+    </script>
+    <div class="loading-spinner">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+</body>
+</html>
